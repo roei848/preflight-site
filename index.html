@@ -301,6 +301,22 @@ h2 {
   50%, 100% { opacity: 0; }
 }
 
+/* ----------------------------------------------------------------- fahhh */
+
+/* The deployment flight, parked: the hero's own banner, tow line and
+   aircraft, minus the crossing. */
+.deploy-art {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 760px) {
+  .deploy-art { flex-direction: column; gap: 12px; }
+  .deploy-art .tow-line { display: none; }
+}
+
 /* ---------------------------------------------------------- boarding pass */
 
 .pass {
@@ -622,8 +638,8 @@ footer svg { flex: none; }
     </p>
 
     <div class="cta-row">
-      <a class="btn" href="https://github.com/roei848/preflight-site/releases/download/v0.2.0/Preflight-0.2.0-arm64.dmg">Download for Apple&nbsp;Silicon</a>
-      <a class="btn quiet" href="https://github.com/roei848/preflight-site/releases/download/v0.2.0/Preflight-0.2.0.dmg">Download for Intel</a>
+      <a class="btn" href="https://github.com/roei848/preflight-site/releases/download/v0.3.0/Preflight-0.3.0-arm64.dmg">Download for Apple&nbsp;Silicon</a>
+      <a class="btn quiet" href="https://github.com/roei848/preflight-site/releases/download/v0.3.0/Preflight-0.3.0.dmg">Download for Intel</a>
     </div>
     <p class="cta-note">macOS · free · about 110 MB · <a href="#boarding">boarding pass below</a></p>
   </div>
@@ -674,10 +690,10 @@ footer svg { flex: none; }
   </div>
 </section>
 
-<!-- ===================================================== new in 0.2.0 -->
+<!-- ====================================================== final calls -->
 <section class="section">
   <div class="wrap">
-    <p class="eyebrow">NEW IN 0.2.0</p>
+    <p class="eyebrow">FINAL CALLS</p>
     <h2>One warning was never going to be enough</h2>
     <p class="lede">
       A meeting can now announce at several lead times. Light up any
@@ -723,6 +739,40 @@ footer svg { flex: none; }
   </div>
 </section>
 
+<!-- ===================================================== new in 0.3.0 -->
+<section class="section" style="background:#FFFFFF; border-bottom:2px solid var(--ink)">
+  <div class="wrap">
+    <p class="eyebrow">NEW IN 0.3.0</p>
+    <h2>When a deployment fails, the plane says Fahhh</h2>
+    <p class="lede">
+      Azure DevOps mails that a release stage failed — usually an E2E run
+      that wants another go. Preflight flies it across with the beacon lit
+      and the stage's name on the banner, so you know which one before you
+      have even looked up.
+    </p>
+
+    <div class="deploy-art" id="deploy-art" role="img" aria-label="The aeroplane with its beacon lit, towing a banner that reads Fahhh.. MyBookings E2E failed"></div>
+
+    <div class="beats">
+      <div class="beat">
+        <h3>Click the banner to rerun</h3>
+        <p>It opens that very deployment in Azure DevOps — the link out of
+        the mail, minus the tracking gunk. Rerun it and get on with your day.</p>
+      </div>
+      <div class="beat">
+        <h3>Not the siren</h3>
+        <p>An outage gets the two-tone siren. A failed deployment gets a
+        five-second clip that says exactly what you were about to say.</p>
+      </div>
+      <div class="beat">
+        <h3>Your call, twice over</h3>
+        <p>Each alert has its own switch in Settings, and so does each sound.
+        One volume covers both. Meetings stay silent, as ever.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===================================================== boarding pass -->
 <section class="section" id="boarding">
   <div class="wrap">
@@ -737,7 +787,7 @@ footer svg { flex: none; }
 
       <div class="pass-fields">
         <div class="field"><div class="k">Passenger</div><div class="v">YOU</div></div>
-        <div class="field"><div class="k">Flight</div><div class="v">PF-020</div></div>
+        <div class="field"><div class="k">Flight</div><div class="v">PF-030</div></div>
         <div class="field"><div class="k">Gate</div><div class="v">MENU BAR</div></div>
         <div class="field"><div class="k">Seat</div><div class="v">76A</div></div>
         <div class="field"><div class="k">Departs</div><div class="v">5 MIN BEFORE</div></div>
@@ -749,14 +799,14 @@ footer svg { flex: none; }
       <div class="stubs">
         <div class="stub">
           <h3>Apple Silicon</h3>
-          <p class="file">Preflight-0.2.0-arm64.dmg · 110 MB</p>
-          <a class="btn" href="https://github.com/roei848/preflight-site/releases/download/v0.2.0/Preflight-0.2.0-arm64.dmg">Download</a>
+          <p class="file">Preflight-0.3.0-arm64.dmg · 110 MB</p>
+          <a class="btn" href="https://github.com/roei848/preflight-site/releases/download/v0.3.0/Preflight-0.3.0-arm64.dmg">Download</a>
           <div class="barcode" aria-hidden="true"></div>
         </div>
         <div class="stub">
           <h3>Intel</h3>
-          <p class="file">Preflight-0.2.0.dmg · 115 MB</p>
-          <a class="btn quiet" href="https://github.com/roei848/preflight-site/releases/download/v0.2.0/Preflight-0.2.0.dmg">Download</a>
+          <p class="file">Preflight-0.3.0.dmg · 115 MB</p>
+          <a class="btn quiet" href="https://github.com/roei848/preflight-site/releases/download/v0.3.0/Preflight-0.3.0.dmg">Download</a>
           <div class="barcode" aria-hidden="true"></div>
         </div>
       </div>
@@ -835,6 +885,14 @@ footer svg { flex: none; }
         on your Mac only. The Google access is read-only — it could not change
         your calendar even if the rabbit wanted to. Nothing is uploaded
         anywhere.</p>
+      </details>
+      <details>
+        <summary>Does it read my mail?</summary>
+        <p>Only to spot two kinds of alert: UptimeRobot saying a monitor is
+        down, and Azure DevOps saying a deployment failed. It reads the
+        subject lines of those, and opens the body of a failed-deployment
+        mail for one thing — the link to the deployment. Nothing else in
+        your inbox is ever opened, and nothing leaves your Mac.</p>
       </details>
       <details>
         <summary>I have two monitors. Which one does it fly on?</summary>
@@ -1013,7 +1071,7 @@ footer svg { flex: none; }
       </g>
       <circle cx="31" cy="30" r="12" fill="#12141A"/>
     </svg>
-    <span>Preflight v0.2.0 · a BlackRabbit contraption · flies on macOS</span>
+    <span>Preflight v0.3.0 · a BlackRabbit contraption · flies on macOS</span>
   </div>
 </footer>
 
@@ -1297,6 +1355,13 @@ document.getElementById('night-art').innerHTML = flyerSvg({
   width: Math.min(340, innerWidth * 0.8),
   beacon: true
 })
+
+/* ----------------------------------------------------------- fahhh flight */
+
+document.getElementById('deploy-art').innerHTML = `
+    <span class="tow-banner">FAHHH.. MYBOOKINGS E2E · FAILED</span>
+    <span class="tow-line"></span>
+    <span class="bob">${flyerSvg({ flyer: 'aeroplane', width: Math.min(260, innerWidth * 0.5), beacon: true })}</span>`
 
 /* ------------------------------------------------------------- copy xattr */
 
