@@ -638,8 +638,8 @@ footer svg { flex: none; }
     </p>
 
     <div class="cta-row">
-      <a class="btn" href="https://github.com/roei848/preflight-site/releases/download/v0.3.1/Preflight-0.3.1-arm64.dmg">Download for Apple&nbsp;Silicon</a>
-      <a class="btn quiet" href="https://github.com/roei848/preflight-site/releases/download/v0.3.1/Preflight-0.3.1.dmg">Download for Intel</a>
+      <a class="btn" href="https://github.com/roei848/preflight-site/releases/download/v0.3.2/Preflight-0.3.2-arm64.dmg">Download for Apple&nbsp;Silicon</a>
+      <a class="btn quiet" href="https://github.com/roei848/preflight-site/releases/download/v0.3.2/Preflight-0.3.2.dmg">Download for Intel</a>
     </div>
     <p class="cta-note">macOS · free · about 110 MB · <a href="#boarding">boarding pass below</a></p>
   </div>
@@ -787,7 +787,7 @@ footer svg { flex: none; }
 
       <div class="pass-fields">
         <div class="field"><div class="k">Passenger</div><div class="v">YOU</div></div>
-        <div class="field"><div class="k">Flight</div><div class="v">PF-031</div></div>
+        <div class="field"><div class="k">Flight</div><div class="v">PF-032</div></div>
         <div class="field"><div class="k">Gate</div><div class="v">MENU BAR</div></div>
         <div class="field"><div class="k">Seat</div><div class="v">76A</div></div>
         <div class="field"><div class="k">Departs</div><div class="v">5 MIN BEFORE</div></div>
@@ -799,14 +799,14 @@ footer svg { flex: none; }
       <div class="stubs">
         <div class="stub">
           <h3>Apple Silicon</h3>
-          <p class="file">Preflight-0.3.1-arm64.dmg · 110 MB</p>
-          <a class="btn" href="https://github.com/roei848/preflight-site/releases/download/v0.3.1/Preflight-0.3.1-arm64.dmg">Download</a>
+          <p class="file">Preflight-0.3.2-arm64.dmg · 109 MB</p>
+          <a class="btn" href="https://github.com/roei848/preflight-site/releases/download/v0.3.2/Preflight-0.3.2-arm64.dmg">Download</a>
           <div class="barcode" aria-hidden="true"></div>
         </div>
         <div class="stub">
           <h3>Intel</h3>
-          <p class="file">Preflight-0.3.1.dmg · 115 MB</p>
-          <a class="btn quiet" href="https://github.com/roei848/preflight-site/releases/download/v0.3.1/Preflight-0.3.1.dmg">Download</a>
+          <p class="file">Preflight-0.3.2.dmg · 116 MB</p>
+          <a class="btn quiet" href="https://github.com/roei848/preflight-site/releases/download/v0.3.2/Preflight-0.3.2.dmg">Download</a>
           <div class="barcode" aria-hidden="true"></div>
         </div>
       </div>
@@ -840,17 +840,18 @@ footer svg { flex: none; }
       <div class="step">
         <div>
           <h3>Clear security</h3>
-          <p>macOS will claim the app is damaged. It is not — macOS says that
-          about any plane without papers (an Apple Developer certificate).
+          <p>macOS will refuse the first take-off and say it cannot verify
+          Preflight — it says that about any plane without papers (an Apple
+          Developer certificate). Close the warning, don't trash the plane.
           One command in Terminal clears it, once, forever:</p>
           <div class="cmd">
             <code id="xattr-cmd">xattr -cr /Applications/Preflight.app</code>
             <button type="button" id="copy-cmd">Copy</button>
           </div>
-          <p style="margin-top:10px">Rather not use Terminal? Right-click the
-          app → <strong>Open</strong> → <strong>Open</strong> again. Recent
-          macOS may also want <strong>System Settings → Privacy &amp; Security
-          → Open Anyway</strong>.</p>
+          <p style="margin-top:10px">Rather not use Terminal? Open
+          <strong>System Settings → Privacy &amp; Security</strong>, scroll
+          down to the note that Preflight was blocked, and press
+          <strong>Open Anyway</strong>.</p>
         </div>
       </div>
       <div class="step">
@@ -1071,7 +1072,7 @@ footer svg { flex: none; }
       </g>
       <circle cx="31" cy="30" r="12" fill="#12141A"/>
     </svg>
-    <span>Preflight v0.3.1 · a BlackRabbit contraption · flies on macOS</span>
+    <span>Preflight v0.3.2 · a BlackRabbit contraption · flies on macOS</span>
   </div>
 </footer>
 
